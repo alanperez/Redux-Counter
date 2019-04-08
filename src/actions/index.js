@@ -1,5 +1,7 @@
-export const INCREMENT = 'INCREMENT';
-export const DECREMENT = 'DECREMENT';
+import Counter from "../components/Counter";
+
+export const INCREMENT = "INCREMENT";
+export const DECREMENT = "DECREMENT";
 
 // Our action creators will return
 // an action packet that our reducer will
@@ -9,18 +11,24 @@ export const DECREMENT = 'DECREMENT';
 // logic of updating the central Redux store. That
 // is left to the reducer(s).
 
-
-
-export const increment = () => {
+export const increment = (count) => {
   // Fill in this function
   return {
-    type: INCREMENT
+    type: INCREMENT,
+    payload: {
+      increment: count
+    }
+
   };
 };
 
-export const decrement = () => {
+export const decrement = (count) => {
   // Fill in this function
   return {
-    type: DECREMENT
+    type: DECREMENT,
+    payload: {
+      decrement: count
+    }
   };
 };
+
